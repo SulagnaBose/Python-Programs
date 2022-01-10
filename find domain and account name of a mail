@@ -1,0 +1,21 @@
+mail = str(input("Enter a mail id:"))
+Split_mail1 = mail.split("@")
+#print(Split_mail1[1])
+x = Split_mail1[1]
+Split_mail2 = x.split(".")
+print("Domain Name: ", Split_mail2[0])
+if(x=="gmail.com"):
+ print("Account name: Google.")
+elif(x=="outlook.in"):
+ print("Account name: Microsoft.")
+elif(x=="mac.com"):
+ print("Account name: Apple.")
+elif(x=="yahoo.com.sg" or "yahoo.co.id" or "yahoo.com.mx"
+ or "yahoo.com.ar" or "yahoo.com.au" or "yahoo.ca" or "yahoo.in"
+ or "rocketmail.com" or "yahoo.de" or "yahoo.it" or "yahoo.es"
+ or "ymail.com" or "yahoo.co.in" or "yahoo.com.br" or "yahoo.co.uk"
+ or "yahoo.fr" or "yahoo.com"):
+ print("Account name: Yahoo.")
+ 
+else:
+ print("Enter a correct mail id.")
