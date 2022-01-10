@@ -1,0 +1,19 @@
+#print Fibonacci series upto nth position using method call
+
+def Fibonacci(n):
+    n1, n2, flag = 0, 1, 0
+    if n<=0:
+        print("Enter a number which is greater than zero.")
+    elif n == 1:
+        print("Fibonacci series:",n1)
+    else:
+        print("Fibonacci series:")
+        while(flag<n):
+            print(n1)
+            temp = n1 + n2
+            n1 = n2
+            n2 = temp
+            flag+=1
+            
+nTerm = int(input("Enter the n-th number: "))
+print(Fibonacci(nTerm))
