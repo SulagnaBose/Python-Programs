@@ -1,0 +1,62 @@
+r1 = int(input("Enter the number of rows of 1st matrix: "))
+r2 = int(input("Enter the number of rows of 2nd matrix: "))
+
+'''if(r1 != r2):
+  #break
+  print("Matrix addition is not possible!")
+  #break'''
+
+c1 = int(input("Enter the number of columns of 1st matrix: "))
+c2 = int(input("Enter the number of columns of 2nd matrix: "))
+
+'''if (c1 != c2):
+  print("Matrix addition is not possible!")
+  #break'''
+
+if(r1 != r2):
+  print("Matrix addition is not possible!")
+elif (c1 != c2):
+  print("Matrix addition is not possible!")
+else:
+  m1=[]
+  print("Enter the elements of 1st matrix: ") 
+  for i in range(r1): 
+       row = [] 
+       for j in range(c1): 
+         print(f"Enter value of {i},{j}: ")
+         n = eval(input()) 
+         row.append(n) 
+        #print(row) 
+       m1.append(row) 
+  print(m1)
+    
+  m2=[]
+  print("Enter the elements of 2nd matrix: ") 
+  for i in range(r2): 
+      row = [] 
+      for j in range(c2): 
+          print(f"Enter value of {i},{j}: ")
+          n = eval(input()) 
+          row.append(n) 
+          #print(row) 
+      m2.append(row) 
+  print(m2)
+
+  m3 = []
+
+  for i in range(r1):
+      row1 = []
+      for j in range(c2):
+          row1.append(0)
+        
+      m3.append(row1)
+#print(m3)
+
+  print("Matrix Addition: ")
+
+  for i in range(r1):
+      for j in range(c1):
+        #for k in range(c1):
+          m3[i][j] = m1[i][j] + m2[i][j]
+  print(m3)
+  
