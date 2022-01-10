@@ -1,0 +1,22 @@
+from queue import LifoQueue
+# Initialization of stack
+stack = LifoQueue(maxsize = 3)
+print("Initial Size: ",stack.qsize())
+
+#push operation
+
+n = 97
+while (not stack.full()):
+    stack.put(chr(n))
+    n = n+1
+    
+print("Full: ",stack.full())
+print("Size: ", stack.qsize())
+
+#pop operation
+
+print("\n Elements popped from the stack: ")
+while(not stack.empty()):
+    print(stack.get())
+    
+print("\n Empty: ", stack.empty())
