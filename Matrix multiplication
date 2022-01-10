@@ -1,0 +1,51 @@
+r1 = int(input("Enter num rows of the 1st matrix: "))
+c1 = int(input("Enter num columns of the 1st matrix: "))
+r2 = int(input("Enter num rows of the 2nd matrix: "))
+c2 = int(input("Enter num columns of the 2nd matrix: "))
+#k = c2
+
+if(c1 != r2): 
+    print("Matrix maltiplication can not possible!") 
+else:
+    #def take_input(r1,r2,c1,c2): 
+    m1=[]
+    print("Enter the elements of 1st matrix: ") 
+    for i in range(r1): 
+        row = [] 
+        for j in range(c1): 
+            print(f"Enter value of {i},{j}: ")
+            n = eval(input()) 
+            row.append(n) 
+            #print(row) 
+        m1.append(row) 
+    print(m1)
+    
+    m2=[]
+    print("Enter the elements of 2nd matrix: ") 
+    for i in range(r2): 
+        row = [] 
+        for j in range(c2): 
+            print(f"Enter value of {i},{j}: ")
+            n = eval(input()) 
+            row.append(n) 
+            #print(row) 
+        m2.append(row) 
+    print(m2)
+    
+    m3 = []
+
+    for i in range(r1):
+        row1 = []
+        for j in range(c2):
+            row1.append(0)
+        
+        m3.append(row1)
+#print(m3)
+
+    print("Matrix multiplication: ")
+
+    for i in range(r1):
+        for j in range(c2):
+            for k in range(c1):
+                m3[i][j] += m1[i][k] * m2[k][j]
+    print(m3) 
