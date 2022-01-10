@@ -1,0 +1,35 @@
+#fibonacci series of prime no.
+
+list1 = []
+def get_prime_number():
+    #list1 = []
+    num = int(input("Enter the n-th number: "))
+    for i in range(num+1):
+        if(i>1):
+            for j in range(2,i):
+                if(i%j) == 0:
+                    break
+            else:
+                list1.append(i)
+    #print(list1)
+#print(get_prime_number())
+
+nTerm = list1[-1]
+def Fibonacci(n):
+    n1, n2, flag = 0, 1, 0
+    if n<=0:
+        print("Enter a number which is greater than zero.")
+    elif n == 1:
+        print("Fibonacci series of prime number:",n1)
+    else:
+        print("Fibonacci series of prime number: ")
+        while(flag<n):
+            print(n1)
+            temp = n1 + n2
+            n1 = n2
+            n2 = temp
+            flag+=1
+            get_prime_number(n1)
+            
+print(Fibonacci(nTerm))
+            
